@@ -1,0 +1,513 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+*{
+    color: white;
+    font-family: poppins;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: rgb(14, 14, 32);
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 70px 1fr;
+    margin: 1.5rem auto;
+    grid-template-areas: 
+        "header header"
+        "main section";
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+section{
+    grid-area: section;
+}
+
+@media(max-width: 64rem){
+    /* 1024px / 16px = 64rem */
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70px 1fr 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "section";
+    }
+
+    header{
+        grid-area: header;
+    }
+
+    main{
+        grid-area: main;
+    }
+
+    section{
+        grid-area: section;
+    }
+
+    .ui-image{
+        margin-left: 7rem;
+    }
+
+    .head__logo{
+        margin-top: 0.3em;
+    }
+
+    .hero-section{
+        gap: 2rem;
+    }
+}
+
+@media(min-width: 22.5rem) and (max-width: 48rem){
+    /* 360px /16px  = 22.5 768px/16px=48rem */
+    html{
+        font-size: 35%;
+    }
+
+    .hero-section{
+        gap: 5rem !important;
+        margin-top: 8rem;
+    }
+
+    .head__navbaritem{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .head__logo img{
+        margin-top: 2rem;
+    }
+
+    .head__logotext{
+        font-size: 5rem;
+    }
+
+    .signupbtn{
+        font-size: 1rem;
+        padding-top: 0.2rem;
+    }
+
+    .content-section{
+        gap: 2.5rem;
+    }
+
+    .ui-content{
+        gap: 4rem;
+        margin-top: 8rem;
+        margin-left: 4rem;
+    }
+
+    .cta-buttons{
+        margin-left: 4rem;
+    }
+
+    .feature-card{
+        margin-left: 3rem;
+    }
+
+    .features{
+        margin-left: 3rem;
+    }
+
+
+}
+
+@media(max-width: 48rem){
+    .head__navbaritem{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+}
+
+@media(min-width: 48rem){
+    .hamburger{
+        display: none;
+    }
+}
+
+
+
+
+
+/* Hero Section */
+
+.hero-section{
+    display: flex;
+    padding-right: 7em;
+    padding-left: 6em;
+    gap: 20rem;
+    align-items: center;
+    & .head__navbar{
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+}
+
+
+/* Logo */
+
+.head__logo{
+    margin-top: 0.3em;
+    font-size: 3rem;
+}
+
+.head__logotrack{
+    color: yellow;
+} 
+
+
+/* Navbar */
+
+.head__navbaritem{
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.head__navbaritem--home{
+    color: yellow;
+    border-bottom: 0.2rem solid yellow;
+}
+
+.head__navbaritem:hover{
+    cursor: pointer;
+    color: yellow;
+    border-bottom: 0.2rem solid yellow;
+    transition: 0.6s ease;
+}
+
+
+/* Signup Button */
+
+.head__signupbtn{
+    width: 10rem;
+    height: 4rem;
+    border: 0.3rem solid transparent;
+    border-radius: 3rem;
+    background-image: linear-gradient(rgb(14, 14, 32), rgb(14, 14, 32)), radial-gradient(circle at top left, purple, yellow);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}  
+
+.head__signupbtn:hover{
+    transform: scale(0.9) translateY(-5px);
+    box-shadow: 0 0 2.5rem yellow;
+    transition: 0.3s ease;
+}
+
+.signupbtn{
+    display: flex;
+    justify-content: center; 
+    text-decoration: none;
+    margin-top: 0.2rem;
+    font-size: 2rem;
+} 
+
+
+/* Hamburger Menu */
+
+.hamburger{
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    padding-right: 2.5rem;
+}
+
+
+
+
+
+/* Mobile Phone Mockup */
+
+.ui-image{
+    width: 15rem;
+    height: 45rem;
+    display: flex;
+    margin-top: 5%;
+}
+
+.ui-image img{
+    margin: 0.5rem;
+    border: 0.3rem solid purple;
+    border-radius: 4rem;
+}
+
+
+
+
+/* Text Content */
+
+.content-section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 7rem;
+    margin-top: 4em;
+    text-align: left;
+    gap: 5em;
+}
+
+.ui-content{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.ui-content__1{
+    padding: 0.2rem 0.8rem;
+    width: fit-content;
+    border: 0.1rem solid transparent;
+    border-radius: 5rem;
+    letter-spacing: 0.1rem;
+    color: rgb(123, 28, 231);
+    background: rgba(123, 28, 231, 0.1);
+}
+
+
+.ui-content__2{
+    font-weight: bold;
+    font-size: 5em;
+}
+
+.ui-content__2--animation::before{
+    content: "Money.";
+    animation:  words 15s infinite;
+}
+
+.ui-content__2--animation::after{
+    content: "";
+    border-left: 0.3rem solid rgb(14, 14, 32);
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 0.3rem solid purple;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Spending.";
+    }
+    21%, 40%{
+        content: "Income.";
+    }
+    41%, 60%{
+        content: "Finance.";
+    }
+    61%, 80%{
+        content: "Savings.";
+    }
+    81%, 100%{
+        content: "Assets.";
+    }
+}
+
+
+.ui-content__3{
+    font-weight: bold;
+    font-size: 5em;
+    color: yellow;
+}
+
+.ui-content__4{
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+}
+
+
+
+
+/* CTA Buttons */
+
+.cta-buttons{
+    margin-top: 3em;
+    letter-spacing: 0.1rem;
+}
+
+.cta-buttons__1{
+    text-decoration: none;
+    color: black;
+    padding: 2rem;
+    background-color: yellow;
+    border: 0.1rem solid yellow;
+    border-radius: 15px;
+    font-weight:500;
+    font-size: 1.5rem;
+}
+
+.cta-buttons__1:hover{
+    color: rgb(14, 14, 32);
+    background-color: yellow;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 2.5rem yellow;
+    transition: 0.3s ease;
+}
+
+.cta-buttons__2{
+    text-decoration: none;
+    align-items: center;
+    margin: 1.2rem;
+    padding: 1rem;
+    border: 0.3rem solid darkmagenta;
+    border-radius: 1.5rem;
+    font-weight:50rem;
+    font-size: 1.5rem;
+    background-image: linear-gradient(rgb(14, 14, 32), rgb(14, 14, 32), radial-gradient(circle at top left, rgb(14, 14, 32), purple));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.cta-buttons__2:hover{
+    font-size: 1.2rem;
+    font-weight: 50rem;
+    transition: 0.3s ease;
+    transform: scale(1.3), translateY(-5px);
+    box-shadow: 0 0 25px purple;
+}
+
+.cta-buttons__2--text{
+    margin-left: 1rem;
+}
+
+
+
+/* Features 1*/
+
+
+.feature-card{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-right: auto;
+}
+
+.feature-card .fas{
+    font-size: 4rem;
+    color: purple;
+}
+
+.feature-card__content{
+    display: flex;
+    gap: 1rem;
+}
+
+#shield__icon{
+    color: yellow;
+}
+
+.feature-card__text{
+    font-size: 1.5rem;
+}
+
+.vertical-line{
+    border-right: 0.2em solid rgba(58, 58, 58, 0.2);
+}
+
+
+
+/* Features 2 */
+
+.features{
+    display: flex;
+    left: 6rem;
+    gap: 0.5rem;
+}
+
+
+.feature__box{
+    border: 0.1rem solid rgba(26, 26, 26, 0.2);
+    border-radius: 2rem;
+    width: 15rem;
+    height: 15rem;
+    justify-content: center;
+    align-content: center;
+    text-align: left;
+    margin-right: 1rem;
+    padding-right: 2rem;
+    background: rgba(44, 44, 109, 0.2);
+}
+
+.feature__box p{
+    background: rgba(44, 44, 109, 0.0);
+    padding-left: 2rem;
+}
+
+.feature__box h3{
+    background: rgba(44, 44, 109, 0.0);
+    padding-left: 2rem;
+}
+
+.feature__box span{
+    background: rgba(44, 44, 109, 0.0);
+    padding-left: 2rem;
+}
+
+.feature__box--wallet .fas{
+    border: 0.1rem solid transparent;
+    border-radius: 1rem;
+    width: 5rem;
+    height: 4rem;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background: rgba(67, 44, 109, 0.5);
+    color: purple;
+    font-size: 3rem;
+}
+
+.feature__box--chart .fas{
+    border: 0.1rem solid transparent;
+    border-radius: 1rem;
+    width: 5rem;
+    height: 4rem;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background: rgba(252, 248, 6, 0.2);
+    color: yellow;
+    font-size: 3rem;
+}
+
+.feature__box--dollar .fas{
+    border: 0.1rem solid transparent;
+    border-radius: 1rem;
+    width: 5rem;
+    height: 4rem;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    background: rgba(67, 44, 109, 0.5);
+    color: purple;
+    font-size: 3rem;
+}
+
+
+
