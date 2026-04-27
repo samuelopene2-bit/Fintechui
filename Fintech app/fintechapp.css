@@ -4,7 +4,6 @@
 
 
 *{
-    color: white;
     font-family: poppins;
 }
 
@@ -13,6 +12,7 @@ html{
 }
 
 body{
+    color: white;
     background-color: rgb(14, 14, 32);
 }
 
@@ -42,6 +42,7 @@ section{
     /* 1024px / 16px = 64rem */
     body{
         display: grid;
+        text-align: center;
         grid-template-columns: 1fr;
         grid-template-rows: 70px 1fr 1fr;
         grid-template-areas:
@@ -63,7 +64,8 @@ section{
     }
 
     .ui-image{
-        margin-left: 7rem;
+        margin-left: 6rem;
+        gap: 1rem;
     }
 
     .head__logo{
@@ -114,19 +116,42 @@ section{
     .ui-content{
         gap: 4rem;
         margin-top: 8rem;
-        margin-left: 4rem;
+        /* margin-left: 4rem; */
+        /* text-align: center; */
+    }
+
+    .ui-content__1{
+        margin-left: 15rem;
+    } 
+
+    .ui-content__3{
+        text-align: center;
+        margin-right: 9rem;
+    }
+
+    .ui-content__4{
+        text-align: center;
+        margin-right: 9rem;
+    }
+
+    .ui-content{
+        /* margin-right: 6rem; */
+        font-size: 120%;
     }
 
     .cta-buttons{
-        margin-left: 4rem;
+        margin-right: 10rem;
+        text-align: center;
     }
 
     .feature-card{
-        margin-left: 3rem;
+        /* margin-left: 3rem; */
+        text-align: center;
     }
 
     .features{
-        margin-left: 3rem;
+        text-align: center;
+        /* margin-left: 3rem; */
     }
 
 
@@ -140,6 +165,7 @@ section{
     .hamburger{
         display: block;
     }
+
 }
 
 @media(min-width: 48rem){
@@ -147,8 +173,6 @@ section{
         display: none;
     }
 }
-
-
 
 
 
@@ -160,11 +184,6 @@ section{
     padding-left: 6em;
     gap: 20rem;
     align-items: center;
-    & .head__navbar{
-        display: flex;
-        align-items: center;
-        gap: 5rem;
-    }
 }
 
 
@@ -182,9 +201,16 @@ section{
 
 /* Navbar */
 
+.head__navbar{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
 .head__navbaritem{
     font-size: 1.5rem;
     text-decoration: none;
+    color: white;
 }
 
 .head__navbaritem--home{
@@ -224,6 +250,7 @@ section{
     text-decoration: none;
     margin-top: 0.2rem;
     font-size: 2rem;
+    color: white;
 } 
 
 
@@ -368,6 +395,7 @@ section{
 }
 
 .cta-buttons__2{
+    color: white;
     text-decoration: none;
     align-items: center;
     margin: 1.2rem;
@@ -385,8 +413,8 @@ section{
     font-size: 1.2rem;
     font-weight: 50rem;
     transition: 0.3s ease;
-    transform: scale(1.3), translateY(-5px);
-    box-shadow: 0 0 25px purple;
+    transform: scale(1.3) translateY(-5px);
+    box-shadow: 0 0 2.5rem purple;
 }
 
 .cta-buttons__2--text{
@@ -434,6 +462,7 @@ section{
 
 .features{
     display: flex;
+    flex-wrap: wrap;
     left: 6rem;
     gap: 0.5rem;
 }
