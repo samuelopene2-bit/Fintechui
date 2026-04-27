@@ -116,8 +116,6 @@ section{
     .ui-content{
         gap: 4rem;
         margin-top: 8rem;
-        /* margin-left: 4rem; */
-        /* text-align: center; */
     }
 
     .ui-content__1{
@@ -135,7 +133,6 @@ section{
     }
 
     .ui-content{
-        /* margin-right: 6rem; */
         font-size: 120%;
     }
 
@@ -145,13 +142,11 @@ section{
     }
 
     .feature-card{
-        /* margin-left: 3rem; */
         text-align: center;
     }
 
     .features{
         text-align: center;
-        /* margin-left: 3rem; */
     }
 
 
